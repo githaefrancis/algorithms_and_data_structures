@@ -2,14 +2,13 @@ import random
 
 
 def partition(arr, low, high):
-    # base case
     pivot = arr[high]
 
     if len(arr) <= 1:
         return low
     i = low - 1
 
-    for j in range(low, high + 1):
+    for j in range(low, high):
 
         if arr[j] < pivot:
             i += 1
@@ -46,4 +45,5 @@ def generate_and_sort(count=20):
         print(numbers)
 
 
-generate_and_sort()
+if __name__ == '__main__':
+    generate_and_sort()
